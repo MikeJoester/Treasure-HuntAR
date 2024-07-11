@@ -7,8 +7,8 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Development](#development)
+- [Screenshots](#screenshots)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
@@ -85,8 +85,15 @@ Contributions are welcome! To contribute:
 - Commit your changes and push to your forked repository.
 - Submit a pull request with a detailed description of your changes.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Screenshots
+![image](https://github.com/MikeJoester/Treasure-HuntAR/assets/74175443/95453634-f627-41d6-a22c-60eedc223b9f)
+
+![image](https://github.com/MikeJoester/Treasure-HuntAR/assets/74175443/831a1c76-cc32-4a66-9ec2-f8444253e282)
+
+![image](https://github.com/MikeJoester/Treasure-HuntAR/assets/74175443/abec714d-ab80-4483-bad6-5608276ee016)
+
+![Image Sequence_010_0000](https://github.com/MikeJoester/Treasure-HuntAR/assets/74175443/11a6a98c-eabe-4192-b2a9-52c2090de214)
+
 
 ## Acknowledgements
 - [Unity](https://unity.com/) for providing an excellent game development platform.
