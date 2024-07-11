@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 78b193962fdf6d249bad890d103fbf7f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - levelButtonPrefab: {fileID: 4732530199153956238, guid: 9c85189a637da704e9db23200d734b86, type: 3}
+  - levelContainer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
