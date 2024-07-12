@@ -15,7 +15,6 @@ public class PlayfabManager : MonoBehaviour
     public bool isLoggedIn = false;
     private PlayFabUIManager playFabUI;
     private static bool isInitialized = false;
-    
     private string LeaderboardName = "GameScore";
     private string PlName = null;
     private string _message;
