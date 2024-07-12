@@ -43,15 +43,15 @@ public class PlayfabManager : MonoBehaviour
     //    DemoLogin();
     }
 
-    private void DemoLogin() {
-        PlayFabClientAPI.LoginWithFacebook(new LoginWithFacebookRequest { 
-            CreateAccount = true, 
-            AccessToken = "GGQVliQkZAySmxRbkxSU3d1UkFHd3JycEdmOGxSakZAEUXB1cnVxSUh6bkZAfdThSSEwzTW5uRmVCS2NvQmljeEVmUFg3MUFtcUJPa3BrMmUxMGw3RkpGMWZA3YWZASNkJ1eU9CN0JCTl9sQ1M4YUdqR3FKZA1dINHIwaVl5ZAC1fZA2VibkZAwUQZDZD",
-            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams {
-                GetPlayerProfile = true
-            }
-        }, OnPlayfabFacebookAuthComplete, OnPlayfabFacebookAuthFailed);
-    }
+    // private void DemoLogin() {
+    //     PlayFabClientAPI.LoginWithFacebook(new LoginWithFacebookRequest { 
+    //         CreateAccount = true, 
+    //         AccessToken = "Your Token Here",
+    //         InfoRequestParameters = new GetPlayerCombinedInfoRequestParams {
+    //             GetPlayerProfile = true
+    //         }
+    //     }, OnPlayfabFacebookAuthComplete, OnPlayfabFacebookAuthFailed);
+    // }
 
     public void GalleryView() {
         SceneManager.LoadScene("ObjectView");
