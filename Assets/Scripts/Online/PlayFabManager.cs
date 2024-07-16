@@ -117,22 +117,32 @@ public class PlayfabManager : MonoBehaviour
     }
 
     public void RegisterButton() {
+        if (playFabUI.registerEmailInput.text.Length == 0) {
+            playFabUI.ChangeDisplayText("Email missing or in incorrect format.");
+            return;
+        }
+
         if (playFabUI.registerPasswordInput.text.Length < 7) {
             playFabUI.ChangeDisplayText("Password too short! Must be 8 characters or above.");
             return;
         }
+
         var request = new RegisterPlayFabUserRequest {
             Email = playFabUI.registerEmailInput.text,
             Password = playFabUI.registerPasswordInput.text,
             RequireBothUsernameAndEmail = false
         };
-        PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
+        PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnRegisterError);
     }
 
     void OnRegisterSuccess(RegisterPlayFabUserResult result) {
         GameObject.Find("RegisterModal").SetActive(false);
         playFabUI.NameWindow.SetActive(true);
         playFabUI.ChangeDisplayText("Registered and logged in!");
+    }
+
+    private void OnRegisterError(PlayFabError error) {
+        playFabUI.ChangeDisplayText("Email has been registered, please try another email!");
     }
 
     public void LoginButton() {
@@ -143,13 +153,17 @@ public class PlayfabManager : MonoBehaviour
                 GetPlayerProfile = true
             }
         };
-        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
+        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginError);
     }
     private void OnLoginSuccess(LoginResult result) {
         playFabUI.ChangeDisplayText("Login successful!");
         CheckUsername(result.InfoResultPayload.PlayerProfile.DisplayName);
         SaveLoginData(result.SessionTicket, result.PlayFabId);
         Debug.Log("Successful login!");
+    }
+
+    private void OnLoginError(PlayFabError error) {
+        playFabUI.ChangeDisplayText("Email or password incorrect! Please try again");
     }
 
     public void ResetPasswordButton() {
