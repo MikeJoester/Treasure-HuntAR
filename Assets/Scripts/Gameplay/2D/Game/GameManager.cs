@@ -113,6 +113,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void SpawnBricks() {
+        totalBricks = 0;
         for (int rowIndex = 0; rowIndex < currentLevel.BrickRows.Count; rowIndex++) {
             GameObject newBrick = Instantiate(brickRows, brickCols.transform); //Spawn Rows
             
